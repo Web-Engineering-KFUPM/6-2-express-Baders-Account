@@ -14,9 +14,10 @@ const app = express();
         res.send("Welcome to the Quote Generator API");
     });
 
-    app.get("api/quote", (req,res) =>{
-        const quote = getRandomQuote();
+    app.get("/api/quote", (req,res) =>{
+        const quote = getRandomQuote().randInt;
         res.json({quote});
+        res.send({quote});
     });
 
 }
