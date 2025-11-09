@@ -9,6 +9,7 @@ const quotes = [
 
 export function getRandomQuote() {
   let index = getRandomInt(quotes.length);
+  console.log(index);
   let quote= "";
  for (let i=0;i<quotes.length;i++){
     if (i===index){
