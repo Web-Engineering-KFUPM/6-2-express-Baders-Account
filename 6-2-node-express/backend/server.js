@@ -17,7 +17,7 @@ const app = express();
     app.get("/api/quote", (req,res) =>{
         const quote = getRandomQuote().quote;
         
-        res.send({quote});
+        res.json({quote});
     });
 
 
