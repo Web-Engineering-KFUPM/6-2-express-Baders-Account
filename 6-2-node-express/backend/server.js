@@ -1,11 +1,31 @@
 import express from "express";
 import cors from "cors";
 import { getRandomQuote } from "./quotes.js";
-
-{/*write code for cors*/}
-
-
-{/*write code to define routes*/}
+const app = express();
 
 
-{/*write code to create server*/}
+{/*write code for cors*/
+    app.use(cors());
+}
+
+
+{/*write code to define routes*/
+    app.get("/",(req,res)=>{
+        res.send("Welcome to the Quote Generator API");
+    });
+
+    app.get("api/quote", (req,res) =>{
+        const quote = getRandomQuote();
+        res.json({quote});
+    });
+
+}
+
+
+{/*write code to create server*/
+    
+    app.listen(3000, () => {
+        console.log("Server is running on http://localhost:3000");
+    })
+    
+}

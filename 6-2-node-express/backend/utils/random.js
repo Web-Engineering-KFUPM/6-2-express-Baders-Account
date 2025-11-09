@@ -1,3 +1,8 @@
 export function getRandomInt(max) {
-  return {/*write code to here*/}
+  let randInt=Math.floor(Mathrandom() * max);
+
+  return {
+    randInt
+
+  }
 }
